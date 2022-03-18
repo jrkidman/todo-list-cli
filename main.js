@@ -21,7 +21,6 @@ let completed = [];
 let add = "";
 let toComplete = 0;
 let status = [];
-let count = 0;
 let selection = 0;
 
 console.log("");
@@ -59,13 +58,13 @@ while (selection !== 3){
                         completed[todoList.length -1] = false;
 
                         if (completed[todoList.length - 1] === false){
-                                status[count] = "[Incomplete] ";
+                                status[i] = "[Incomplete] ";
                         }
                         else if (complete[todoList.length - 1] === true){
-                                status[count] = "[Complete] ";
+                                status[i] = "[Complete] ";
                         }
 
-                console.log(Number(count + 1) + "." + status[count] + todoList[count]);
+                console.log(Number(i + 1) + "." + status[i] + todoList[i]);
                 // console.log("________________________________________________");
 
                 }
@@ -81,14 +80,14 @@ while (selection !== 3){
                 for (let i = 0; i < todoList.length; i++){
                         completed[toComplete - 1] = true;
 
-                        if (completed[count] === false){
-                                status[count] = "[Incomplete] ";
+                        if (completed[i] === false){
+                                status[i] = "[Incomplete] ";
                         }
-                        else if (completed[count] === true){
-                                status[count] = "[Complete] ";
+                        else if (completed[i] === true){
+                                status[i] = "[Complete] ";
                         }
                 
-                        console.log(Number(count + 1) + "." + [status[count]] + todoList[count]);
+                        console.log(Number(i + 1) + "." + [status[i]] + todoList[i]);
                         // console.log("________________________________________________");
                 }
         }
